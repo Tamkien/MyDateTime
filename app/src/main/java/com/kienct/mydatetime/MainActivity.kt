@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        dummyCalendar.set(Calendar.DATE, c.get(Calendar.DATE) + 1) // assume that at first dummyCalendar is after c
         btDate.setOnClickListener {
             val datePickerDialog = DatePickerDialog(
                 this, 0
